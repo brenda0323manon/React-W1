@@ -1,35 +1,27 @@
-
 import './App.css';
 
-  // import React, { Component } from 'react'
-  
-  // export default class App extends Component {
-  //   render() {
-  //     return (
-  //       <div className="App">
-  //       <h1>Name: Brenda Mañon</h1>
-  //       <p>Number: 1234567890</p>
-  //       <p>Date of Birth: May 126, 2001</p>
-  //   </div>
-  //     )
-  //   }
-  // }
-
 import React, { Component } from 'react'
+import BasicInfo from './BasicInfo'
 
 export default class App extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
-      person: {}
+      person: {
+        Name: 'Brenda Mañon',
+        Age: '22',
+        Birthday: 'May 26, 2001'
+      }
     }
 
   }
   render() {
     return (
       <div>
-        
+        <BasicInfo person =  {this.state.person}/>
       </div>
     )
   }
 }
+
+
